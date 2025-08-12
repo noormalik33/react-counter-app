@@ -84,9 +84,9 @@ IT Student
 
 Connect with me:  
 
-📧 [Email](mailto:noormalik56500@gmail.com)  
+📧 **Email:** <noormalik56500@gmail.com>
 💼 [LinkedIn](https://www.linkedin.com/in/noormalik56500)  
-🌐 [Portfolio](https://noormalik-portfolio.netlify.app)  
+🌐 [Portfolio](https://noor-malik-portfolio.netlify.app/)  
 🐙 [GitHub](https://github.com/noormalik33)  
 📹 [YouTube](https://www.youtube.com/@CoreITTech1)  
 📸 [Instagram](https://www.instagram.com/coreit.tech)  
