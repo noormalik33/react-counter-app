@@ -188,7 +188,7 @@ function App() {
         <HistoryLog history={history} undoLastAction={undoLastAction} theme={theme} setHistory={setHistory} />
 
         <div className="mt-3 sm:mt-4 md:mt-6 z-10 pointer-events-auto animate-mixed-slide max-w-xs sm:max-w-sm md:max-w-md mx-auto">
-          <form onSubmit={handleCustomIncrement} className="mb-3 sm:mb-4">
+          <form onSubmit={handleCustomIncrement} className="mb-4 sm:mb-6 md:mb-8">
             <div
               className={`flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-3 ${
                 theme === 'mixed' ? 'bg-mixed-secondary' : 'bg-mixed-secondary-light'
@@ -275,9 +275,9 @@ function App() {
       </div>
 
       <footer
-        className={`w-full p-2 sm:p-3 md:p-4 ${
+        className={`w-full p-1 sm:p-2 md:p-4 ${
           theme === 'mixed' ? 'bg-mixed-accent text-text-mixed' : 'bg-mixed-accent-light text-text-mixed-light'
-        } text-xs sm:text-sm flex flex-col sm:flex-row flex-wrap justify-center items-center gap-1 sm:gap-2 md:gap-3 font-inter fixed bottom-0 left-0 z-40`}
+        } text-xs sm:text-sm flex flex-wrap justify-center items-center gap-1 sm:gap-2 md:gap-3 font-inter fixed bottom-0 left-0 z-40`}
       >
         <span>Developed by</span>
         <a
