@@ -64,7 +64,7 @@ Build the production version:npm run build
 
 
 Deploy to platforms like Vercel or Netlify:
-Connect your GitHub repo (https://github.com/noormalik33/react-counter-app).
+Connect your GitHub repo (https://github.com/noormalik33/react-counter-app.git).
 Set the build command to npm run build and output directory to build..
 
 
