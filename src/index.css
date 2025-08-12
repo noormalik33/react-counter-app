@@ -20,19 +20,19 @@
 
 @layer utilities {
   .shadow-mixed {
-    @apply shadow-md sm:shadow-lg;
+    @apply shadow-sm sm:shadow-md md:shadow-lg;
   }
 
   .shadow-mixed-light {
-    @apply shadow-sm sm:shadow-md;
+    @apply shadow-xs sm:shadow-sm md:shadow-md;
   }
 
   .glow-effect {
-    filter: drop-shadow(0 0 4px rgba(74,144,226, 0.3));
+    filter: drop-shadow(0 0 3px rgba(74,144,226, 0.3));
   }
 
   .glow-effect-light {
-    filter: drop-shadow(0 0 3px rgba(74,144,226, 0.2));
+    filter: drop-shadow(0 0 2px rgba(74,144,226, 0.2));
   }
 
   .animate-mixed-pulse {
@@ -41,7 +41,7 @@
 
   @keyframes mixed-pulse {
     0% { text-shadow: 0 0 2px rgba(74,144,226, 0.3), 0 0 4px rgba(74,144,226, 0.15); }
-    50% { text-shadow: 0 0 6px rgba(74,144,226, 0.5), 0 0 8px rgba(74,144,226, 0.3); }
+    50% { text-shadow: 0 0 5px rgba(74,144,226, 0.5), 0 0 7px rgba(74,144,226, 0.3); }
     100% { text-shadow: 0 0 2px rgba(74,144,226, 0.3), 0 0 4px rgba(74,144,226, 0.15); }
   }
 
@@ -50,9 +50,9 @@
   }
 
   @keyframes mixed-pulse-light {
-    0% { text-shadow: 0 0 2px rgba(74,144,226, 0.2), 0 0 4px rgba(74,144,226, 0.1); }
-    50% { text-shadow: 0 0 6px rgba(74,144,226, 0.4), 0 0 8px rgba(74,144,226, 0.2); }
-    100% { text-shadow: 0 0 2px rgba(74,144,226, 0.2), 0 0 4px rgba(74,144,226, 0.1); }
+    0% { text-shadow: 0 0 2px rgba(74,144,226, 0.2), 0 0 3px rgba(74,144,226, 0.1); }
+    50% { text-shadow: 0 0 5px rgba(74,144,226, 0.4), 0 0 7px rgba(74,144,226, 0.2); }
+    100% { text-shadow: 0 0 2px rgba(74,144,226, 0.2), 0 0 3px rgba(74,144,226, 0.1); }
   }
 
   [data-theme="mixed"] .particle-bg {
@@ -61,10 +61,10 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60"><polygon points="30,6 54,54 6,54" fill="rgba(74,144,226,0.1)"/><circle cx="30" cy="30" r="1" fill="rgba(74,144,226,0.2)"/></svg>') repeat,
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"><polygon points="25,5 45,45 5,45" fill="rgba(74,144,226,0.1)"/><circle cx="25" cy="25" r="1" fill="rgba(74,144,226,0.2)"/></svg>') repeat,
                 linear-gradient(135deg, rgba(12, 17, 29, 0.85), rgba(74,144,226, 0.05));
-    background-size: 60px 60px, auto;
-    animation: mixed-twinkle 35s linear infinite;
+    background-size: 50px 50px, auto;
+    animation: mixed-twinkle 40s linear infinite;
     z-index: -1;
     pointer-events: none;
   }
@@ -75,10 +75,10 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80"><rect x="30" y="30" width="2" height="2" fill="rgba(74,144,226,0.05)"/><circle cx="40" cy="40" r="1" fill="rgba(74,144,226,0.1)"/></svg>') repeat,
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60"><rect x="25" y="25" width="2" height="2" fill="rgba(74,144,226,0.05)"/><circle cx="30" cy="30" r="1" fill="rgba(74,144,226,0.1)"/></svg>') repeat,
                 linear-gradient(135deg, rgba(245, 247, 250, 0.9), rgba(74,144,226, 0.03));
-    background-size: 80px 80px, auto;
-    animation: mixed-flow 30s linear infinite;
+    background-size: 60px 60px, auto;
+    animation: mixed-flow 35s linear infinite;
     z-index: -1;
     pointer-events: none;
   }
@@ -87,25 +87,25 @@
     [data-theme="mixed"] .particle-bg,
     [data-theme="light"] .particle-bg {
       animation: none;
-      background-size: 50px 50px, auto;
+      background-size: 40px 40px, auto;
     }
   }
 
   @keyframes mixed-twinkle {
     0% { background-position: 0 0, 0% 50%; }
-    100% { background-position: 60px 60px, 100% 50%; }
+    100% { background-position: 50px 50px, 100% 50%; }
   }
 
   @keyframes mixed-flow {
     0% { background-position: 0 0, 0% 50%; }
-    100% { background-position: -80px -80px, 100% 50%; }
+    100% { background-position: -60px -60px, 100% 50%; }
   }
 
   .btn-mixed {
-    @apply px-4 py-2.5 sm:px-5 sm:py-3 rounded-lg font-medium text-sm sm:text-base transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 min-h-[44px];
+    @apply px-3 py-2 sm:px-4 sm:py-2.5 md:px-5 md:py-3 rounded-lg font-medium text-xs sm:text-sm md:text-base transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 min-h-[40px] sm:min-h-[44px];
   }
 
   .input-mixed {
-    @apply px-3 py-2 sm:px-4 sm:py-2.5 rounded-lg border focus:outline-none focus:ring-2 focus:ring-offset-1 transition-all duration-300 text-sm sm:text-base min-h-[44px];
+    @apply px-2 py-1.5 sm:px-3 sm:py-2 md:px-4 md:py-2.5 rounded-lg border focus:outline-none focus:ring-2 focus:ring-offset-1 transition-all duration-300 text-xs sm:text-sm md:text-base min-h-[40px] sm:min-h-[44px];
   }
 }

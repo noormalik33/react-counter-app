@@ -21,8 +21,9 @@ module.exports = {
         inter: ['Inter', 'sans-serif'],
       },
       boxShadow: {
-        'mixed': '0 4px 20px rgba(74, 144, 226, 0.2)',
-        'mixed-light': '0 4px 20px rgba(74, 144, 226, 0.15)',
+        'xs': '0 2px 8px rgba(74, 144, 226, 0.1)',
+        'mixed': '0 3px 15px rgba(74, 144, 226, 0.2)',
+        'mixed-light': '0 3px 15px rgba(74, 144, 226, 0.15)',
       },
       animation: {
         'mixed-fade': 'mixedFade 0.6s ease-out',

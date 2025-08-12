@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 function Counter({ count, updateCount, theme }) {
   return (
     <motion.div
-      className={`p-4 sm:p-6 md:p-8 rounded-xl shadow-mixed flex flex-col items-center border ${
+      className={`p-3 sm:p-4 md:p-6 lg:p-8 rounded-xl shadow-mixed flex flex-col items-center border ${
         theme === 'mixed' ? 'bg-mixed-primary border-mixed-accent' : 'bg-mixed-light border-mixed-accent-light'
-      } z-10 pointer-events-auto max-w-md mx-auto`}
+      } z-10 pointer-events-auto w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto`}
       initial={{ opacity: 0, y: -15 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
@@ -14,9 +14,9 @@ function Counter({ count, updateCount, theme }) {
       aria-label="Counter controls"
     >
       <motion.div
-        className={`text-3xl sm:text-4xl md:text-5xl font-inter font-semibold ${
+        className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-inter font-semibold ${
           theme === 'mixed' ? 'text-mixed-accent' : 'text-mixed-accent-light'
-        } mb-4 sm:mb-6 animate-mixed-pulse ${theme === 'mixed' ? 'glow-effect' : 'glow-effect-light'}`}
+        } mb-3 sm:mb-4 md:mb-6 animate-mixed-pulse ${theme === 'mixed' ? 'glow-effect' : 'glow-effect-light'}`}
         key={count}
         initial={{ scale: 0.9 }}
         animate={{ scale: 1 }}
@@ -25,11 +25,11 @@ function Counter({ count, updateCount, theme }) {
       >
         {count}
       </motion.div>
-      <div className="flex flex-wrap justify-center gap-2 sm:gap-4">
+      <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4">
         <motion.button
           className={`btn-mixed ${
             theme === 'mixed' ? 'bg-mixed-accent text-text-mixed hover:bg-mixed-accent/90' : 'bg-mixed-accent-light text-text-mixed-light hover:bg-mixed-accent-light/90'
-          } focus:ring-mixed-accent min-w-[100px]`}
+          } focus:ring-mixed-accent min-w-[80px] sm:min-w-[100px]`}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={() => updateCount('increment')}
@@ -40,7 +40,7 @@ function Counter({ count, updateCount, theme }) {
         <motion.button
           className={`btn-mixed ${
             theme === 'mixed' ? 'bg-mixed-accent text-text-mixed hover:bg-mixed-accent/90' : 'bg-mixed-accent-light text-text-mixed-light hover:bg-mixed-accent-light/90'
-          } focus:ring-mixed-accent min-w-[100px]`}
+          } focus:ring-mixed-accent min-w-[80px] sm:min-w-[100px]`}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={() => updateCount('decrement')}
@@ -51,7 +51,7 @@ function Counter({ count, updateCount, theme }) {
         <motion.button
           className={`btn-mixed ${
             theme === 'mixed' ? 'bg-mixed-accent text-text-mixed hover:bg-mixed-accent/90' : 'bg-mixed-accent-light text-text-mixed-light hover:bg-mixed-accent-light/90'
-          } focus:ring-mixed-accent min-w-[100px]`}
+          } focus:ring-mixed-accent min-w-[80px] sm:min-w-[100px]`}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={() => updateCount('reset')}
