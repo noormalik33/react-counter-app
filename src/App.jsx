@@ -134,7 +134,7 @@ function App() {
         <motion.button
           className={`fixed top-2 right-2 sm:top-3 sm:right-3 md:top-4 md:right-4 btn-mixed ${
             theme === 'mixed' ? 'bg-mixed-accent text-text-mixed' : 'bg-mixed-accent-light text-text-mixed-light'
-          } focus:ring-mixed-accent flex items-center space-x-1 text-xs sm:text-sm min-w-[70px] sm:min-w-[80px] z-50`}
+          } focus:ring-mixed-accent flex items-center space-x-1 text-xs sm:text-sm min-w-[60px] sm:min-w-[70px] z-50 md:min-w-[80px] p-1 sm:p-2`}
           onClick={toggleTheme}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
