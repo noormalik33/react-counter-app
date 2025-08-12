@@ -140,7 +140,7 @@ function App() {
           whileTap={{ scale: 0.95 }}
           aria-label={`Switch to ${theme === 'mixed' ? 'light' : 'dark'} mode`}
         >
-          {theme === 'mixed' ? '☀️ Light' : '🌌 Dark'}
+          {theme === 'mixed' ? '☀️ Light Mode' : '🌌 Dark Mode'}
         </motion.button>
 
         <div className="mt-10 sm:mt-12 md:mt-14 pt-4">
