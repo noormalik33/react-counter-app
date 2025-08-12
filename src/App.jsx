@@ -124,7 +124,7 @@ function App() {
 
   return (
     <div
-      className={`min-h-screen flex flex-col justify-between p-4 sm:p-6 md:p-8 lg:p-10 relative overflow-hidden ${
+      className={`min-h-screen flex flex-col justify-between p-4 sm:p-6 md:p-8 lg:p-10 pb-20 sm:pb-24 relative overflow-hidden ${
         theme === 'mixed' ? 'bg-mixed-primary text-text-mixed' : 'bg-mixed-light text-text-mixed-light'
       }`}
     >
@@ -133,7 +133,7 @@ function App() {
       <motion.button
         className={`absolute top-3 right-3 sm:top-4 sm:right-4 btn-mixed ${
           theme === 'mixed' ? 'bg-mixed-accent text-text-mixed' : 'bg-mixed-accent-light text-text-mixed-light'
-        } focus:ring-mixed-accent flex items-center space-x-1 sm:space-x-2 text-xs sm:text-sm`}
+        } focus:ring-mixed-accent flex items-center space-x-1 sm:space-x-2 text-xs sm:text-sm min-w-[80px]`}
         onClick={toggleTheme}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
@@ -143,7 +143,7 @@ function App() {
       </motion.button>
 
       <h1
-        className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-inter font-bold ${
+        className={`text-xl sm:text-2xl md:text-3xl lg:text-4xl font-inter font-bold ${
           theme === 'mixed' ? 'text-mixed-accent' : 'text-mixed-accent-light'
         } mb-4 sm:mb-6 md:mb-8 text-center animate-mixed-slide`}
       >
@@ -151,16 +151,16 @@ function App() {
       </h1>
 
       <h5
-        className={`text-lg sm:text-xl md:text-2xl lg:text-3xl font-inter font-semibold ${
+        className={`text-base sm:text-lg md:text-xl lg:text-2xl font-inter font-semibold ${
           theme === 'mixed' ? 'text-mixed-accent' : 'text-mixed-accent-light'
         } mb-4 sm:mb-6 md:mb-8 text-center animate-mixed-slide`}
       >
         BY NOOR MALIK
       </h5>
 
-      <div className="mb-4 sm:mb-6 z-10 flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-3 animate-mixed-slide">
+      <div className="mb-4 sm:mb-6 z-10 flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-3 animate-mixed-slide max-w-md mx-auto">
         <label
-          className={`font-inter text-base sm:text-lg ${
+          className={`font-inter text-sm sm:text-base ${
             theme === 'mixed' ? 'text-mixed-accent' : 'text-mixed-accent-light'
           }`}
           htmlFor="step-input"
@@ -186,18 +186,18 @@ function App() {
 
       <HistoryLog history={history} undoLastAction={undoLastAction} theme={theme} setHistory={setHistory} />
 
-      <div className="mt-4 sm:mt-6 z-10 pointer-events-auto animate-mixed-slide">
+      <div className="mt-4 sm:mt-6 z-10 pointer-events-auto animate-mixed-slide max-w-md mx-auto">
         <form onSubmit={handleCustomIncrement} className="mb-4">
           <div
-            className={`flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4 ${
+            className={`flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-3 ${
               theme === 'mixed' ? 'bg-mixed-secondary' : 'bg-mixed-secondary-light'
-            } p-4 sm:p-5 rounded-xl shadow-mixed border ${
+            } p-3 sm:p-4 rounded-xl shadow-mixed border ${
               theme === 'mixed' ? 'border-mixed-accent' : 'border-mixed-accent-light'
             }`}
           >
             <label
               htmlFor="customIncrement"
-              className={`font-inter text-base sm:text-lg ${
+              className={`font-inter text-sm sm:text-base ${
                 theme === 'mixed' ? 'text-mixed-accent' : 'text-mixed-accent-light'
               }`}
             >
@@ -212,14 +212,14 @@ function App() {
                 onChange={handleInputChange}
                 className={`input-mixed ${
                   theme === 'mixed' ? 'bg-mixed-primary border-mixed-accent text-text-mixed focus:ring-mixed-accent' : 'bg-mixed-light border-mixed-accent-light text-text-mixed-light focus:ring-mixed-accent-light'
-                } w-full sm:w-32`}
-                placeholder="Enter value"
+                } w-full sm:w-28`}
+                placeholder="Value"
               />
               <motion.button
                 type="submit"
                 className={`btn-mixed ${
                   theme === 'mixed' ? 'bg-mixed-accent text-text-mixed hover:bg-mixed-accent/90' : 'bg-mixed-accent-light text-text-mixed-light hover:bg-mixed-accent-light/90'
-                } pointfocus:ring-mixed-accent`}
+                } focus:ring-mixed-accent min-w-[80px]`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -231,15 +231,15 @@ function App() {
 
         <form onSubmit={handleCustomDecrement}>
           <div
-            className={`flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4 ${
+            className={`flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-3 ${
               theme === 'mixed' ? 'bg-mixed-secondary' : 'bg-mixed-secondary-light'
-            } p-4 sm:p-5 rounded-xl shadow-mixed border ${
+            } p-3 sm:p-4 rounded-xl shadow-mixed border ${
               theme === 'mixed' ? 'border-mixed-accent' : 'border-mixed-accent-light'
             }`}
           >
             <label
               htmlFor="customDecrement"
-              className={`font-inter text-base sm:text-lg ${
+              className={`font-inter text-sm sm:text-base ${
                 theme === 'mixed' ? 'text-mixed-accent' : 'text-mixed-accent-light'
               }`}
             >
@@ -254,14 +254,14 @@ function App() {
                 onChange={handleInputChange}
                 className={`input-mixed ${
                   theme === 'mixed' ? 'bg-mixed-primary border-mixed-accent text-text-mixed focus:ring-mixed-accent' : 'bg-mixed-light border-mixed-accent-light text-text-mixed-light focus:ring-mixed-accent-light'
-                } w-full sm:w-32`}
-                placeholder="Enter value"
+                } w-full sm:w-28`}
+                placeholder="Value"
               />
               <motion.button
                 type="submit"
                 className={`btn-mixed ${
                   theme === 'mixed' ? 'bg-mixed-accent text-text-mixed hover:bg-mixed-accent/90' : 'bg-mixed-accent-light text-text-mixed-light hover:bg-mixed-accent-light/90'
-                } focus:ring-mixed-accent`}
+                } focus:ring-mixed-accent min-w-[80px]`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -273,9 +273,9 @@ function App() {
       </div>
 
       <footer
-        className={`w-full p-4 ${
+        className={`w-full p-3 sm:p-4 ${
           theme === 'mixed' ? 'bg-mixed-accent text-text-mixed' : 'bg-mixed-accent-light text-text-mixed-light'
-        } text-xs sm:text-sm flex flex-col sm:flex-row flex-wrap justify-center items-center gap-2 sm:gap-4 fixed bottom-0 left-0 font-inter`}
+        } text-xs sm:text-sm flex flex-col sm:flex-row flex-wrap justify-center items-center gap-1.5 sm:gap-3 fixed bottom-0 left-0 font-inter`}
       >
         <span>Developed by</span>
         <a

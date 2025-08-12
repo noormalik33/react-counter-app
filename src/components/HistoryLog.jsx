@@ -14,14 +14,14 @@ function HistoryLog({ history, undoLastAction, theme, setHistory }) {
   };
 
   return (
-    <div className="mt-8 w-full max-w-lg z-10 pointer-events-auto" role="region" aria-label="History log">
-      <div className="flex justify-between items-center mb-4">
-        <h2 className={`text-2xl sm:text-3xl font-inter font-semibold ${
+    <div className="mt-4 sm:mt-6 w-full max-w-md mx-auto z-10 pointer-events-auto" role="region" aria-label="History log">
+      <div className="flex flex-col sm:flex-row justify-between items-center mb-3 sm:mb-4 gap-2 sm:gap-0">
+        <h2 className={`text-xl sm:text-2xl font-inter font-semibold ${
           theme === 'mixed' ? 'text-mixed-accent' : 'text-mixed-accent-light'
         } glow-effect`}>History Log</h2>
-        <div className="flex space-x-3">
+        <div className="flex space-x-2 sm:space-x-3">
           <motion.button
-            className={`btn-mixed bg-red-600 text-white hover:bg-red-700 focus:ring-red-500`}
+            className={`btn-mixed bg-red-600 text-white hover:bg-red-700 focus:ring-red-500 min-w-[100px]`}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={clearHistory}
@@ -30,7 +30,7 @@ function HistoryLog({ history, undoLastAction, theme, setHistory }) {
             Clear History
           </motion.button>
           <motion.button
-            className={`btn-mixed bg-yellow-600 text-white hover:bg-yellow-700 focus:ring-yellow-500`}
+            className={`btn-mixed bg-yellow-600 text-white hover:bg-yellow-700 focus:ring-yellow-500 min-w-[100px]`}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={undoLastAction}
@@ -41,19 +41,19 @@ function HistoryLog({ history, undoLastAction, theme, setHistory }) {
           </motion.button>
         </div>
       </div>
-      <div className={`p-5 rounded-xl shadow-mixed border ${
+      <div className={`p-3 sm:p-4 rounded-xl shadow-mixed border ${
         theme === 'mixed' ? 'bg-mixed-secondary border-mixed-accent' : 'bg-mixed-secondary-light border-mixed-accent-light'
-      } max-h-64 overflow-y-auto`}>
+      } max-h-[40vh] sm:max-h-[50vh] overflow-y-auto scrollbar-thin scrollbar-thumb-mixed-accent scrollbar-track-mixed-primary`}>
         {history.length === 0 ? (
-          <p className={`font-inter text-base ${
+          <p className={`font-inter text-sm sm:text-base ${
             theme === 'mixed' ? 'text-text-mixed' : 'text-text-mixed-light'
           }`}>No actions yet.</p>
         ) : (
-          <ul className="space-y-3">
+          <ul className="space-y-2">
             {history.map((entry, index) => (
               <motion.li
                 key={index}
-                className={`font-inter text-base ${
+                className={`font-inter text-sm sm:text-base ${
                   theme === 'mixed' ? 'text-text-mixed' : 'text-text-mixed-light'
                 }`}
                 initial={{ opacity: 0, x: -10 }}
