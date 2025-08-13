@@ -283,8 +283,7 @@ function App() {
       >
         <span>Developed by</span>
         <a
-          href="https://noor-malik-portfolio.netlify.app/
-"
+          href="https://react-counter-app-noor.netlify.app/"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-mixed-accent transition-colors flex items-center gap-1"
@@ -312,8 +311,6 @@ function App() {
   Email
 </a>
 
-          <FaEnvelope /> Email
-        </a>
         <span className="hidden sm:inline">|</span>
         <a
           href="https://www.linkedin.com/in/noormalik56500/"
