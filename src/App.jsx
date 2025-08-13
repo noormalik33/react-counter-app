@@ -293,9 +293,25 @@ function App() {
         </a>
         <span className="hidden sm:inline">|</span>
         <a
-          href="mailto:noormalik56500@gmail.com"
-          className="hover:text-mixed-accent transition-colors flex items-center gap-1"
-        >
+  href="#"
+  onClick={(e) => {
+    e.preventDefault();
+    if (/Mobi|Android/i.test(navigator.userAgent)) {
+      // Mobile → open in default mail app
+      window.location.href = 'mailto:noormalik56500@gmail.com';
+    } else {
+      // Desktop → open Gmail compose in browser
+      window.open(
+        'https://mail.google.com/mail/?view=cm&fs=1&to=noormalik56500@gmail.com',
+        '_blank'
+      );
+    }
+  }}
+  className="hover:text-mixed-accent transition-colors flex items-center gap-1"
+>
+  Email
+</a>
+
           <FaEnvelope /> Email
         </a>
         <span className="hidden sm:inline">|</span>
