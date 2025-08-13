@@ -283,7 +283,8 @@ function App() {
       >
         <span>Developed by</span>
         <a
-          href="https://your-portfolio-link.com"
+          href="https://noor-malik-portfolio.netlify.app/
+"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-mixed-accent transition-colors flex items-center gap-1"
